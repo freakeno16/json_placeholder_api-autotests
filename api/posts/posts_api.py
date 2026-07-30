@@ -8,4 +8,5 @@ class PostsAPI(BaseAPI):
         self.endpoint = '/posts'
 
     def get_all_posts(self):
-        return requests.get(f'{self.base_url}{self.endpoint}')
+        # return requests.get(f'{self.base_url}{self.endpoint}')
+        return self.get(self.endpoint)
