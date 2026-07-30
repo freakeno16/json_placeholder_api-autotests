@@ -14,7 +14,13 @@ class BaseAPI:
 
     def post(self, endpoint, headers, payload):
         return requests.post(
-            f'{self.base_url}/{endpoint}',
+            f'{self.base_url}{endpoint}',
             headers=headers,
             json=payload
         )
+
+    def assert_status_code(self, response, expected_status_code):
+        assert response.status_code == expected_status_code, f'''
+        'Ожидали: {expected_status_code}',
+        'Получили: {response.status_code}'
+        '''
