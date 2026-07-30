@@ -1,9 +1,13 @@
 import os
 import requests
+from dotenv import load_dotenv
 
+
+load_dotenv()
 
 class BaseAPI:
-    base_url = os.getenv('BASE_URL')
+    def __init__(self):
+        self.base_url = os.getenv('BASE_URL')
 
     def get(self, endpoint):
         return requests.get(f'{self.base_url}/{endpoint}')
