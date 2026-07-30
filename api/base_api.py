@@ -10,7 +10,7 @@ class BaseAPI:
         self.base_url = os.getenv('BASE_URL')
 
     def get(self, endpoint):
-        return requests.get(f'{self.base_url}/{endpoint}')
+        return requests.get(f'{self.base_url}{endpoint}')
 
     def post(self, endpoint, headers, payload):
         return requests.post(
