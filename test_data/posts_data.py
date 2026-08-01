@@ -23,5 +23,5 @@ posts_data = {
         "My reality: messy desk and 3 coffee mugs. Relatble? ☕",
         "Secret: everyone is just winging it. Don't doubt yourself."
     ],
-    ids
+    "ids": [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
 }
