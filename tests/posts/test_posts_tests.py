@@ -3,7 +3,7 @@ def test_get_all_posts(posts_api):
     posts_api.check_status_code_is(response, 200)
 
 def test_get_post_by_id(posts_api):
-    response = posts_api.get_post_by_id(101)
+    response = posts_api.get_post_by_id()
     posts_api.check_status_code_is(response, 200)
 
 def test_create_post(posts_api):
